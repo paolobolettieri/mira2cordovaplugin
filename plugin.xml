@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.visualengines.mira.scan"
+      version="0.1.0">
+    <name>ScanListener</name>
+    <description>Cordova MIRA Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,scan</keywords>
+ 
+ 
+    <js-module src="www/scanlistener.js" name="Scan">
+        <clobbers target="window.scan" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Scan">
+                <param name="android-package" value="com.visualengines.mira.cordova"/>
+            </feature>
+        </config-file>
+ 
+        <source-file src="src/com/visualengines/mira/cordova/ScanListenerPlugin.java" target-dir="src/com/visualengines/mira/cordova" />     
+     </platform>         
+</plugin>
