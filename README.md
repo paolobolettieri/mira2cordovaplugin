@@ -1,0 +1,2 @@
+mira2cordovaplugin
+==================
